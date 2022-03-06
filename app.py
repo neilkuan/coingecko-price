@@ -5,7 +5,7 @@ def pair(cost, sell):
     if cost > sell:
         return f'賠{cost - sell} TWD'
     elif cost < sell:
-        return f'賺{sell - cost} TWD'
+        return f'賺{0.96 * (sell - cost)} TWD'
 
 def now_price(token: Dict):
     for k in token.keys():
